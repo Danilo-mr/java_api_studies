@@ -4,11 +4,11 @@ package classesAndObjects.nestedClass.innerClass;
  * This class is an exemple of Nested Class (Inner Class) and the main method shows how to create an 
  * instance of an inner class using the outer class object
  * */
-public class Couple {
+public class CoupleInnerClassExemple {
 	private String motherName;
 	private String fatherName;
 	
-	public Couple(String motherName, String fatherName) {
+	public CoupleInnerClassExemple(String motherName, String fatherName) {
 		this.motherName = motherName;
 		this.fatherName = fatherName;
 	}
@@ -51,15 +51,15 @@ public class Couple {
 	}
 	
 	public static void main(String[] args) {
-		Couple couple = new Couple("Maria", "João");
+		CoupleInnerClassExemple couple = new CoupleInnerClassExemple("Maria", "João");
 		
-		Couple.Son son = couple.new Son("José", 20);
+		CoupleInnerClassExemple.Son son = couple.new Son("José", 20);
 		son.introduceYouself();
 		son.introduceYourParents();
 		
 		System.out.println();
 		
-		Couple.Daughter daughter = couple.new Daughter("Ana", 19);
+		CoupleInnerClassExemple.Daughter daughter = couple.new Daughter("Ana", 19);
 		daughter.introduceYouself();
 		daughter.introduceYourParents();
 	}
